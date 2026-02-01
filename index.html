@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍀 행운의 로또 번호 추천 🍀</title>
+    <title>💖 하니하니 로또 🐩 귀여운 말티즈의 행운 번호</title>
     <style>
         * {
             margin: 0;
@@ -14,9 +14,13 @@
         body {
             font-family: 'Arial', sans-serif;
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background: linear-gradient(135deg,
+                #ff0080 0%, #ff8c00 10%, #ffd700 20%,
+                #00ff00 30%, #00ffff 40%, #0080ff 50%,
+                #8000ff 60%, #ff00ff 70%, #ff0080 80%,
+                #ffd700 90%, #00ffff 100%);
             background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
+            animation: gradientShift 8s ease infinite;
             overflow-x: hidden;
             position: relative;
         }
@@ -40,98 +44,254 @@
 
         .star {
             position: absolute;
-            width: 3px;
-            height: 3px;
+            width: 4px;
+            height: 4px;
             background: white;
             border-radius: 50%;
-            animation: twinkle 3s infinite;
+            animation: twinkle 2s infinite;
+            box-shadow: 0 0 10px rgba(255,255,255,0.8);
         }
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
         }
 
-        /* 고양이 애니메이션 */
-        .cat {
+        /* 하트 효과 */
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: heartFloat 8s infinite;
+            opacity: 0;
+        }
+
+        @keyframes heartFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+
+        /* 말티즈 애니메이션 */
+        .maltese {
             position: fixed;
-            font-size: 60px;
+            font-size: 80px;
             z-index: 100;
             cursor: pointer;
-            filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
-            animation: catWalk 20s linear infinite;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,1))
+                    drop-shadow(0 0 40px rgba(255,192,203,0.8));
+            animation: malteseRun 12s linear infinite;
         }
 
-        @keyframes catWalk {
+        @keyframes malteseRun {
             0% {
-                left: -100px;
-                bottom: 20%;
-                transform: scaleX(1);
+                left: -150px;
+                bottom: 15%;
+                transform: scaleX(1) translateY(0) rotate(0deg);
+            }
+            10% {
+                transform: scaleX(1) translateY(-30px) rotate(-5deg);
+            }
+            20% {
+                transform: scaleX(1) translateY(0) rotate(0deg);
+            }
+            30% {
+                transform: scaleX(1) translateY(-30px) rotate(5deg);
             }
             48% {
                 left: 100%;
-                bottom: 20%;
-                transform: scaleX(1);
+                bottom: 15%;
+                transform: scaleX(1) translateY(0) rotate(0deg);
             }
             50% {
                 left: 100%;
-                bottom: 20%;
-                transform: scaleX(-1);
+                bottom: 15%;
+                transform: scaleX(-1) translateY(0) rotate(0deg);
+            }
+            60% {
+                transform: scaleX(-1) translateY(-30px) rotate(-5deg);
+            }
+            70% {
+                transform: scaleX(-1) translateY(0) rotate(0deg);
+            }
+            80% {
+                transform: scaleX(-1) translateY(-30px) rotate(5deg);
             }
             98% {
-                left: -100px;
-                bottom: 20%;
-                transform: scaleX(-1);
+                left: -150px;
+                bottom: 15%;
+                transform: scaleX(-1) translateY(0) rotate(0deg);
             }
             100% {
-                left: -100px;
-                bottom: 20%;
-                transform: scaleX(1);
+                left: -150px;
+                bottom: 15%;
+                transform: scaleX(1) translateY(0) rotate(0deg);
             }
         }
 
-        /* 강아지 애니메이션 */
-        .dog {
+        .maltese2 {
             position: fixed;
-            font-size: 60px;
+            font-size: 70px;
             z-index: 100;
             cursor: pointer;
-            filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
-            animation: dogRun 15s linear infinite;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,1))
+                    drop-shadow(0 0 40px rgba(255,192,203,0.8));
+            animation: maltese2Run 15s linear infinite;
         }
 
-        @keyframes dogRun {
+        @keyframes maltese2Run {
             0% {
-                right: -100px;
-                top: 30%;
-                transform: scaleX(-1) translateY(0);
+                right: -150px;
+                top: 25%;
+                transform: scaleX(-1) translateY(0) rotate(0deg);
             }
-            25% {
-                transform: scaleX(-1) translateY(-20px);
+            12% {
+                transform: scaleX(-1) translateY(-25px) rotate(-3deg);
+            }
+            24% {
+                transform: scaleX(-1) translateY(0) rotate(3deg);
             }
             48% {
                 right: 100%;
-                top: 30%;
-                transform: scaleX(-1) translateY(0);
+                top: 25%;
+                transform: scaleX(-1) translateY(0) rotate(0deg);
             }
             50% {
                 right: 100%;
-                top: 30%;
-                transform: scaleX(1) translateY(0);
+                top: 25%;
+                transform: scaleX(1) translateY(0) rotate(0deg);
             }
-            75% {
-                transform: scaleX(1) translateY(-20px);
+            62% {
+                transform: scaleX(1) translateY(-25px) rotate(3deg);
+            }
+            74% {
+                transform: scaleX(1) translateY(0) rotate(-3deg);
             }
             98% {
-                right: -100px;
-                top: 30%;
-                transform: scaleX(1) translateY(0);
+                right: -150px;
+                top: 25%;
+                transform: scaleX(1) translateY(0) rotate(0deg);
             }
             100% {
-                right: -100px;
-                top: 30%;
+                right: -150px;
+                top: 25%;
+                transform: scaleX(-1) translateY(0) rotate(0deg);
+            }
+        }
+
+        .maltese3 {
+            position: fixed;
+            font-size: 65px;
+            z-index: 100;
+            cursor: pointer;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,1))
+                    drop-shadow(0 0 40px rgba(255,192,203,0.8));
+            animation: maltese3Jump 18s linear infinite;
+        }
+
+        @keyframes maltese3Jump {
+            0% {
+                left: -150px;
+                top: 50%;
+                transform: scaleX(1) translateY(0);
+            }
+            5% {
+                transform: scaleX(1) translateY(-40px);
+            }
+            10% {
+                transform: scaleX(1) translateY(0);
+            }
+            15% {
+                transform: scaleX(1) translateY(-40px);
+            }
+            48% {
+                left: 100%;
+                top: 50%;
+                transform: scaleX(1) translateY(0);
+            }
+            50% {
+                left: 100%;
+                top: 50%;
                 transform: scaleX(-1) translateY(0);
             }
+            55% {
+                transform: scaleX(-1) translateY(-40px);
+            }
+            60% {
+                transform: scaleX(-1) translateY(0);
+            }
+            65% {
+                transform: scaleX(-1) translateY(-40px);
+            }
+            98% {
+                left: -150px;
+                top: 50%;
+                transform: scaleX(-1) translateY(0);
+            }
+            100% {
+                left: -150px;
+                top: 50%;
+                transform: scaleX(1) translateY(0);
+            }
+        }
+
+        /* 하니하니 말풍선 */
+        .speech-bubble {
+            position: fixed;
+            background: linear-gradient(135deg, #fff, #ffe6f0);
+            color: #ff1493;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 10px 40px rgba(255,20,147,0.5);
+            z-index: 99;
+            animation: bubbleFloat 3s ease-in-out infinite;
+            border: 3px solid #ff69b4;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        @keyframes bubbleFloat {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-15px) scale(1.05);
+            }
+        }
+
+        .bubble1 {
+            left: 20%;
+            top: 10%;
+            animation-delay: 0s;
+        }
+
+        .bubble2 {
+            right: 20%;
+            top: 15%;
+            animation-delay: 1s;
+        }
+
+        .bubble3 {
+            left: 30%;
+            bottom: 20%;
+            animation-delay: 2s;
         }
 
         /* 메인 컨테이너 */
@@ -166,25 +326,35 @@
         }
 
         h1 {
-            font-size: 4rem;
-            color: white;
-            text-shadow: 0 0 20px rgba(255,255,255,0.5),
-                         0 0 40px rgba(255,255,255,0.3),
-                         0 5px 10px rgba(0,0,0,0.3);
+            font-size: 4.5rem;
+            background: linear-gradient(45deg,
+                #ff0080, #ff8c00, #ffd700, #00ff00,
+                #00ffff, #0080ff, #ff00ff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255,255,255,0.8),
+                         0 0 60px rgba(255,0,255,0.6),
+                         0 10px 20px rgba(0,0,0,0.3);
             margin-bottom: 20px;
-            animation: glow 2s ease-in-out infinite;
+            animation: rainbowText 3s linear infinite, glow 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,0.8));
+        }
+
+        @keyframes rainbowText {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
         }
 
         @keyframes glow {
             0%, 100% {
-                text-shadow: 0 0 20px rgba(255,255,255,0.5),
-                             0 0 40px rgba(255,255,255,0.3),
-                             0 5px 10px rgba(0,0,0,0.3);
+                filter: drop-shadow(0 0 20px rgba(255,255,255,0.8))
+                        drop-shadow(0 0 40px rgba(255,0,255,0.6));
             }
             50% {
-                text-shadow: 0 0 30px rgba(255,255,255,0.8),
-                             0 0 60px rgba(255,255,255,0.6),
-                             0 5px 10px rgba(0,0,0,0.3);
+                filter: drop-shadow(0 0 40px rgba(255,255,255,1))
+                        drop-shadow(0 0 80px rgba(255,0,255,0.8));
             }
         }
 
@@ -372,8 +542,13 @@
                 font-size: 1.2rem;
             }
 
-            .cat, .dog {
-                font-size: 40px;
+            .maltese, .maltese2, .maltese3 {
+                font-size: 50px;
+            }
+
+            .speech-bubble {
+                font-size: 20px;
+                padding: 10px 20px;
             }
         }
 
@@ -397,15 +572,21 @@
     <!-- 별 효과 -->
     <div class="stars" id="stars"></div>
 
-    <!-- 고양이와 강아지 -->
-    <div class="cat" title="행운의 고양이">🐱</div>
-    <div class="dog" title="행운의 강아지">🐶</div>
+    <!-- 귀여운 말티즈들 -->
+    <div class="maltese" title="하니하니 말티즈 🐶">🐩</div>
+    <div class="maltese2" title="하니하니 말티즈 🐶">🐩</div>
+    <div class="maltese3" title="하니하니 말티즈 🐶">🐩</div>
+
+    <!-- 하니하니 말풍선 -->
+    <div class="speech-bubble bubble1">하니💕</div>
+    <div class="speech-bubble bubble2">하니✨</div>
+    <div class="speech-bubble bubble3">하니🌟</div>
 
     <!-- 메인 컨테이너 -->
     <div class="container">
         <div class="header">
-            <h1>🍀 행운의 로또 🍀</h1>
-            <p class="subtitle">고양이와 강아지가 전하는 행운의 번호!</p>
+            <h1>💖 하니하니 로또 💖</h1>
+            <p class="subtitle">귀여운 말티즈가 전하는 행운의 번호! 🐩✨</p>
         </div>
 
         <div class="lotto-card">
@@ -429,10 +610,11 @@
     </div>
 
     <script>
-        // 별 생성
+        // 별과 하트 생성
         function createStars() {
             const starsContainer = document.getElementById('stars');
-            for (let i = 0; i < 100; i++) {
+            // 별 생성
+            for (let i = 0; i < 150; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 star.style.left = Math.random() * 100 + '%';
@@ -440,20 +622,67 @@
                 star.style.animationDelay = Math.random() * 3 + 's';
                 starsContainer.appendChild(star);
             }
+            // 하트 생성
+            const hearts = ['💖', '💕', '💗', '💓', '💝', '🌟', '✨', '⭐'];
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.bottom = '0';
+                heart.style.animationDelay = Math.random() * 8 + 's';
+                heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+                starsContainer.appendChild(heart);
+            }
         }
 
         // 파티클 효과
         function createParticles(x, y) {
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 50; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
-                particle.style.left = x + 'px';
-                particle.style.top = y + 'px';
+                const offsetX = (Math.random() - 0.5) * 200;
+                const offsetY = (Math.random() - 0.5) * 200;
+                particle.style.left = (x + offsetX) + 'px';
+                particle.style.top = (y + offsetY) + 'px';
                 particle.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                particle.style.width = (5 + Math.random() * 15) + 'px';
+                particle.style.height = particle.style.width;
                 document.body.appendChild(particle);
 
                 setTimeout(() => particle.remove(), 3000);
             }
+        }
+
+        // 하니하니 소리 효과
+        function playHaniSound() {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+            // 하니~~ 소리 (높은 음)
+            const oscillator1 = audioContext.createOscillator();
+            const gainNode1 = audioContext.createGain();
+            oscillator1.connect(gainNode1);
+            gainNode1.connect(audioContext.destination);
+            oscillator1.frequency.value = 800;
+            oscillator1.type = 'sine';
+            gainNode1.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode1.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+            oscillator1.start(audioContext.currentTime);
+            oscillator1.stop(audioContext.currentTime + 0.3);
+
+            // 하니~~ 소리 (낮은 음)
+            setTimeout(() => {
+                const oscillator2 = audioContext.createOscillator();
+                const gainNode2 = audioContext.createGain();
+                oscillator2.connect(gainNode2);
+                gainNode2.connect(audioContext.destination);
+                oscillator2.frequency.value = 600;
+                oscillator2.type = 'sine';
+                gainNode2.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode2.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                oscillator2.start(audioContext.currentTime);
+                oscillator2.stop(audioContext.currentTime + 0.3);
+            }, 100);
         }
 
         // 로또 번호 생성
@@ -507,16 +736,17 @@
                 // 메시지 표시
                 setTimeout(() => {
                     const messages = [
-                        '🐱 고양이가 행운을 빌어요!',
-                        '🐶 강아지가 응원해요!',
-                        '✨ 이번 주 대박 나세요!',
-                        '🍀 행운이 함께하길!',
-                        '🎉 1등 당첨을 기원합니다!',
-                        '💰 대박의 기운이 느껴져요!',
-                        '🌟 오늘은 당신의 행운의 날!'
+                        '🐩 하니하니~ 행운이 가득! 💖',
+                        '✨ 말티즈가 행운을 불러왔어요! 🌟',
+                        '💕 하니하니~ 대박 나세요! 💰',
+                        '🌈 오늘은 당신의 행운의 날! 하니! ✨',
+                        '🎉 말티즈의 축복을 받으세요! 🐩',
+                        '💝 하니하니~ 1등 당첨! 🍀',
+                        '⭐ 귀여운 말티즈의 행운 번호! 💖'
                     ];
                     message.textContent = messages[Math.floor(Math.random() * messages.length)];
-                    btnText.textContent = '다시 생성하기!';
+                    btnText.textContent = '하니하니 다시!';
+                    playHaniSound();
                 }, 1500);
             }, 1000);
         }
@@ -540,29 +770,55 @@
             oscillator.stop(audioContext.currentTime + 0.1);
         }
 
-        // 고양이/강아지 클릭 이벤트
-        document.querySelector('.cat').addEventListener('click', function(e) {
-            createParticles(e.clientX, e.clientY);
-            this.style.animation = 'none';
-            setTimeout(() => {
-                this.style.animation = 'catWalk 20s linear infinite';
-            }, 10);
+        // 말티즈 클릭 이벤트
+        document.querySelectorAll('.maltese, .maltese2, .maltese3').forEach(maltese => {
+            maltese.addEventListener('click', function(e) {
+                createParticles(e.clientX, e.clientY);
+                playHaniSound();
+
+                // 말풍선 생성
+                const bubble = document.createElement('div');
+                bubble.textContent = '하니하니! 💖';
+                bubble.style.position = 'fixed';
+                bubble.style.left = e.clientX + 'px';
+                bubble.style.top = (e.clientY - 50) + 'px';
+                bubble.style.fontSize = '24px';
+                bubble.style.fontWeight = 'bold';
+                bubble.style.color = '#ff1493';
+                bubble.style.textShadow = '0 0 10px white';
+                bubble.style.zIndex = '1000';
+                bubble.style.animation = 'fadeOut 2s forwards';
+                document.body.appendChild(bubble);
+
+                setTimeout(() => bubble.remove(), 2000);
+
+                this.style.animation = 'none';
+                const animName = this.classList.contains('maltese') ? 'malteseRun 12s linear infinite' :
+                                this.classList.contains('maltese2') ? 'maltese2Run 15s linear infinite' :
+                                'maltese3Jump 18s linear infinite';
+                setTimeout(() => {
+                    this.style.animation = animName;
+                }, 10);
+            });
         });
 
-        document.querySelector('.dog').addEventListener('click', function(e) {
-            createParticles(e.clientX, e.clientY);
-            this.style.animation = 'none';
-            setTimeout(() => {
-                this.style.animation = 'dogRun 15s linear infinite';
-            }, 10);
-        });
+        // 페이드아웃 애니메이션
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                0% { opacity: 1; transform: translateY(0); }
+                100% { opacity: 0; transform: translateY(-100px); }
+            }
+        `;
+        document.head.appendChild(style);
 
         // 초기화
         createStars();
 
         // 페이지 로드시 환영 메시지
         window.addEventListener('load', () => {
-            document.getElementById('message').textContent = '버튼을 눌러 행운의 번호를 받아보세요!';
+            document.getElementById('message').textContent = '하니하니~ 버튼을 눌러 행운의 번호를 받아보세요! 🐩💖';
+            playHaniSound();
         });
     </script>
 </body>
